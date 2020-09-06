@@ -34,7 +34,15 @@
             <div v-if="monsterLife == 0" class="win">Voce ganhou</div>
             <div v-else class="lose">Voce perdeu</div>
         </div>
-        <div class="panel buttons"></div>
+        <div class="panel buttons">
+            <templates v-if="running">
+                <button class="btn ataque-fraco">Ataque fraco</button>
+                <button class="btn ataque-forte">Ataque Forte</button>
+                <button class="btn curar">Curar</button>
+                <button class="btn reiniciar">Reiniciar</button>
+            </templates>
+            <button v-else class="btn iniciar">Iniciar Jogo</button>
+        </div>
         <div class="panel logs"></div>
     </div>
     <script src="../Projeto-01-Monstro/app.js"></script>
