@@ -35,8 +35,11 @@
 .lifebar .life.danger {
     background-color: red;
 }
+
+   /* Area de resultado */
+
 .result {
-    font-size: 26px;
+    font-size: 1.3rem;
     color: gray;
     align-content: center;
     text-align: center;
