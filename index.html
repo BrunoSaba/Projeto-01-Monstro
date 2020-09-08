@@ -38,7 +38,7 @@
             <templates v-if="running">
                 <button @click="attack(false)" class="btn ataque-fraco">Ataque fraco</button>
                 <button @click="attack(true)" class="btn ataque-forte">Ataque Forte</button>
-                <button class="btn curar">Curar</button>
+                <button @click="healandhurt" class="btn curar">Curar</button>
                 <button @click="running = false" 
                  class="btn reiniciar">Reiniciar</button>
             </templates>
@@ -46,7 +46,7 @@
             @click="startGame"
             class="btn iniciar">Iniciar Jogo</button>
         </div>
-        <div class="panel logs"></div>
+        <div v-if="logs-r" class="panel logs"></div>
     </div>
     <script src="../Projeto-01-Monstro/app.js"></script>
 </body>

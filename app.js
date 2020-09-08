@@ -19,7 +19,7 @@ new Vue ({
         },
         attack(especial) {
             this.hurt('playerLife', 5, 11, false)
-            this.hurt('monsterLife', 7, 12, true)
+            this.hurt('monsterLife', 3, 9, especial)
             
         },
         hurt(atr, min, max, especial) {
@@ -30,7 +30,15 @@ new Vue ({
         getRandom(min, max) {
             const value = Math.random() * (max - min) + min
             return Math.round(value)
-        }
+        },
+         healandhurt(){
+         this.heal(10, 15)
+         this.hurt('playerLife', 7, 12, false)
+        },
+           heal(min, max){
+          const heal = this.getRandom (min, max)
+          this.playerLife = Math.min(this.playerLife + heal, 100)
+       }
 
     },
     watch: {
