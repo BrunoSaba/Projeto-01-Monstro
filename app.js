@@ -18,12 +18,14 @@ new Vue ({
             this.monsterLife = 100
         },
         attack(especial) {
-            this.hurt(7, 12, false)
+            this.hurt('playerLife', 5, 11, false)
+            this.hurt('monsterLife', 7, 12, true)
+            
         },
-        hurt(min, max, especial) {
+        hurt(atr, min, max, especial) {
             const plus = especial ? 5 : 0
             const hurt = this.getRandom(min + plus, max + plus)
-            this.playerLife = Math.max(this.playerLife - hurt, 0) 
+            this[atr] = Math.max(this[atr] - hurt, 0) 
         },
         getRandom(min, max) {
             const value = Math.random() * (max - min) + min
