@@ -36,12 +36,15 @@
         </div>
         <div class="panel buttons">
             <templates v-if="running">
-                <button class="btn ataque-fraco">Ataque fraco</button>
-                <button class="btn ataque-forte">Ataque Forte</button>
+                <button @click="attack(false)" class="btn ataque-fraco">Ataque fraco</button>
+                <button @click="attack(true)" class="btn ataque-forte">Ataque Forte</button>
                 <button class="btn curar">Curar</button>
-                <button class="btn reiniciar">Reiniciar</button>
+                <button @click="running = false" 
+                 class="btn reiniciar">Reiniciar</button>
             </templates>
-            <button v-else class="btn iniciar">Iniciar Jogo</button>
+            <button v-else 
+            @click="startGame"
+            class="btn iniciar">Iniciar Jogo</button>
         </div>
         <div class="panel logs"></div>
     </div>
