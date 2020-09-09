@@ -80,3 +80,18 @@
     background-color: gray;
     color: white;
 }
+
+
+/* ESTILO PARA OS LOGS */
+
+
+
+.logs ul li {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+
+    
+}
